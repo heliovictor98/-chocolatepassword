@@ -16,7 +16,10 @@ export class HomeComponent {
   senhaGerada: boolean = false;
   loading: boolean = false;
   btnGerar: boolean = true;
+
+  //MENSAGENS
   msgSucesso: boolean = false;
+  msgErro: boolean = false;
 
   password = '';
 
@@ -28,6 +31,8 @@ export class HomeComponent {
   quantidadeCaractere: number = 3;
 
   gerarSenha() {
+    this.msgErro = false;
+    this.msgSucesso = false;
     const upperCaseCharset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const lowerCaseCharset = 'abcdefghijklmnopqrstuvwxyz';
     const numberCharset = '0123456789';
@@ -40,37 +45,29 @@ export class HomeComponent {
     if (this.inputEspecial) charset += symbolCharset;
 
     if (charset === '') {
+      this.msgErro = true;
+      this.senhaGerada = false;
       setTimeout(() => {
-       console.log("teste")
-      }, 500);
-    }
-
-    let generatedPassword = '';
+        this.msgErro = false;
+      }, 4000);
+    } else {
+      let generatedPassword = '';
     for (let i = 0, n = charset.length; i < this.quantidadeCaractere; ++i) {
       generatedPassword += charset.charAt(Math.floor(Math.random() * n));
       this.password = generatedPassword;
     }
-    console.log(this.password);
-
-      this.loading = true;
-      this.btnGerar = false;
-      this.senhaGerada = false;
+    this.loading = true;
+    this.btnGerar = false;
+    this.senhaGerada = false;
     setTimeout(() =>{
       this.loading = false;
       this.btnGerar = true;
       this.senhaGerada = true;
     },1500)
 
-  }
-
-  onQuantidadeCaractereChange(value: number): void {
-    if (value < 3) {
-      this.quantidadeCaractere = 3;
-    } else if (value > 36) {
-      this.quantidadeCaractere = 36;
-    } else {
-      this.quantidadeCaractere = value;
     }
+
+
   }
 
   btnCopy(){
@@ -80,7 +77,7 @@ export class HomeComponent {
     }
     setTimeout(() =>{
       this.msgSucesso = false;
-    },5000)
+    },2500)
   }
 
   constructor() { }
