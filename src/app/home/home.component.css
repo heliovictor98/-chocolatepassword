@@ -1,0 +1,11 @@
+.ajuste{
+  margin-top: 30px;
+}
+
+.style-bloco {
+  border-color: #000; /* cor da borda, ajuste conforme necessário */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* sombra com deslocamento x, deslocamento y, desfoque e cor */
+  padding: 20px; /* espaçamento interno para melhor visualização */
+}
+
