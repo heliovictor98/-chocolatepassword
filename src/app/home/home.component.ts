@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -8,11 +9,10 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     CommonModule
   ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  templateUrl: '../../app/home/home.component.html',
+  styleUrl: '../../app/home/home.component.scss'
 })
 export class HomeComponent {
-
   senhaGerada: boolean = false;
   loading: boolean = false;
   btnGerar: boolean = true;
