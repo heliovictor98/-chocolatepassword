@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+import { LottieModule } from 'ngx-lottie';
 @Component({
   selector: 'app-home',
   standalone: true,

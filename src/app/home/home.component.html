@@ -1,8 +1,8 @@
 <div class="container text-height ajuste" >
   <div class="row justify-content-lg-center justify-content-sm-center">
-    <div class="col-lg-3 col-sm-6 style-bloco">
+    <div class="col-lg-3 col-sm-6 style-bloco" style="background-color: white;">
       <div class="text-center">
-        <h4>Chocolate Password</h4>
+        <h2>Chocolate Password</h2>
       </div>
 
       <div class="input-group col-lg-12">
@@ -11,29 +11,29 @@
         <input type="range" class="form-range" id="customRange1" min="3" max="20" [(ngModel)]="quantidadeCaractere">
       </div>
 
-      <div class="col-lg-6">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" [(ngModel)]="inputMaiusculo">
+      <div class="col-lg-6 form-switch" style="margin-top: 15px;">
+        <input class="form-check-input" type="checkbox" role="switch" value="" id="flexCheckDefault" [(ngModel)]="inputMaiusculo">
         <label class="form-check-label" for="flexCheckDefault" style="margin-left: 10px;">
-          Maiuscula
+          Maiúscula
         </label>
       </div>
 
-      <div class="col-lg-6">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" [(ngModel)]="inputMinuscula">
+      <div class="col-lg-6 form-switch margin-top-5px">
+        <input class="form-check-input" type="checkbox" role="switch" value="" id="flexCheckDefault" [(ngModel)]="inputMinuscula">
         <label class="form-check-label" for="flexCheckDefault" style="margin-left: 10px;">
-          Minuscula
+          Minúscula
         </label>
       </div>
 
-      <div class="col-lg-6">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" [(ngModel)]="inputNumero">
+      <div class="col-lg-6 form-switch margin-top-5px">
+        <input class="form-check-input" type="checkbox" role="switch" value="" id="flexCheckDefault" [(ngModel)]="inputNumero">
         <label class="form-check-label" for="flexCheckDefault" style="margin-left: 10px;">
-          Numero
+          Número
         </label>
       </div>
 
-      <div class="col-lg-12">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" [(ngModel)]="inputEspecial">
+      <div class="col-lg-12 form-switch margin-top-5px">
+        <input class="form-check-input" type="checkbox" role="switch" value="" id="flexCheckDefault" [(ngModel)]="inputEspecial">
         <label class="form-check-label" for="flexCheckDefault" style="margin-left: 10px;">
           Caracter Especial
         </label>
@@ -58,12 +58,12 @@
 
       <div class="alert alert-success" role="alert" *ngIf="msgSucesso">
         <i class="bi bi-check-circle-fill"></i>
-        Senha Copiada com sucesso!
+        Senha copiada com sucesso!
       </div>
 
       <div style="margin-top: 15px;" class="alert alert-danger" role="alert" *ngIf="msgErro">
         <i class="bi bi-bug-fill"></i>
-        Preencha alguns do itens para gerar sua senha!
+        Marque alguns do itens para gerar sua senha!
       </div>
 
     </div>
